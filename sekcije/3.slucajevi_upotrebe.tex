@@ -1,43 +1,61 @@
 \section{Slučajevi upotrebe}
-\subsection{Kreiranje korisničkih grupa}
-\begin{itemize}
-\item Korisnici aplikacije mogu kreirati grupu koja je jedinstveno određena nazivom. 
-\item Prilikom kreiranja korisnik bira da li će grupa biti:
 
-\begin{enumerate}
-\item vidljiva - mogu je posetiti i pretražiti svi korisnici mreže
-\item sakrivena - mogu je posetiti i pretražiti samo clanovi iste
-\end{enumerate}
-
-\item	Kreator grupe poziva druge korisnike ili ogranizacije da se učlane.
-\item	Kreator u svakom trenutku može da obriše člana ili bilo koju objavu ako smatra da je neprikladna.
-\item	Pored objava mogu se praviti i eventovi tematski slični grupi.
-\end{itemize}
-
-
-
-\subsection{Kreiranje profila (korisnik)}
+\subsection{Pristupanje mreži}
+\subsubsection{Kreiranje korisničkog profila}
 \begin{itemize}
 \item Kratak opis - Korisnik se registruje tako što popunjava formu svojim ličnim podacima. Nakon validacije unetih podataka korisnik prelazi na sledeći korak. Kako bi upotpunio kreiranje profila bira oblasti interesovanja na osnovu kojih će mu objave biti filtrirane.
 \item Učesnici - neregistrovan korisnik
 \item Preduslovi - korisnik ima pristup internetu
 \item Postuslovi - korisniku je kreiran nalog
 \item Glavni tok
-\begin{enumerate}
-\item Korisnik odlazi na stranicu za registrovanje novih korisnika
-\item Korisnik unosi lične podatke i klikne na dugme,,Sledeći korak"
-\item Vrši se validacija podataka
-\item Na sledećoj strani korisnik bira oblasti interesovanja prema kojim će mu se prikazivati objave (bira iz padajuće liste sa opcijom pretraživanja)
-\item Korisnik klikne na dugme ,,Završi registraciju"
-\item Sistem privremeno čuva unete podatke
-\item Korisniku je stigao aktivacioni e-mail sa linkom za potvrdu registracije
-\item Korisnik otvara mail i klikne na link za potvrdu registracije
-\item Sistem aktivira nalog
-\item Korisnik dobija obaveštenje da je nalog kreiran
-\end{enumerate}
-\item Alternativni tok \\
-3.a Nevalidna prijava - sistem ukazuje korisniku na kom polju forme podaci nisu korektno uneti. Slučaj upotrebe se nastavlja na koraku 2. \\
-7.a Korisnik nije potvrdio registraciju u odredjenom vremenskom intervalu - link za potvrdu je istekao. Slučaj upotrebe se završava
+	\begin{enumerate}
+	\item Korisnik odlazi na stranicu za registrovanje novih korisnika
+	\item Korisnik unosi lične podatke i klikne na dugme "Sledeći korak"
+	\item Vrši se validacija podataka
+	\item Na sledećoj strani korisnik bira oblasti interesovanja prema kojim će mu se prikazivati objave (bira iz padajuće liste sa opcijom pretraživanja)
+	\item Korisnik klikne na dugme "Završi registraciju"
+	\item Sistem privremeno čuva unete podatke
+	\item Korisniku je stigao aktivacioni e-mail sa linkom za potvrdu registracije
+	\item Korisnik otvara mail i klikne na link za potvrdu registracije
+	\item Sistem aktivira nalog
+	\item Korisnik dobija obaveštenje da je nalog kreiran
+	\end{enumerate}
+\item Alternativni tokovi
+	\begin{itemize}
+	\item[3.a] Nevalidna prijava - sistem ukazuje korisniku na kom polju forme podaci nisu korektno uneti. Slučaj upotrebe se nastavlja na koraku 2.
+	\item[7.a] Korisnik nije potvrdio registraciju u odredjenom vremenskom intervalu - link za potvrdu je istekao. Slučaj upotrebe se završava
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Kreiranje profila organizacija}
+\begin{itemize}
+\item Kratak opis - Organizacije pristupaju mreži tako što popunjavaju formu odgovarajućim podacima. Tu formu proverava administrator nakon čega odobrava profil. Time organizacija postaje ravnopravan član mreže.
+\item Učesnici - organizacija i administrator
+\item Preduslovi
+	\begin{itemize}
+	\item Organizacija je validno pravno lice koje može pristupiti mreži 
+	\item Organizacija ima pristup internetu
+	\end{itemize}
+\item Postuslovi - organizaciji je kreiran nalog
+\item Glavni tok
+	\begin{enumerate}
+	\item Organizacija odlazi na stranicu za registrovanje organizacija
+	\item Organizacija unosi podatke i klikne na dugme "Završi unos podataka"
+	\item Sistem proverava unete podatke
+	\item Sistem obaveštava organizaciju o uspešnosti inicijalne provere podataka i daje mogućnost korigovanja unetih podataka.
+	\item Organizacija klikne na dugme "Završi registraciju"
+	\item Uneti podaci se šalju administratoru na pregled
+	\item Administrator odobrava pristup organizacije socijalnoj mreži i šalje e-mail za potvrdu naloga
+	\item Organizacija potvrđuje nalog korišćenjem linka poslatog e-mailom
+	\item Sistem aktivira nalog
+	\item Organizacija dobija obaveštenje da je nalog kreiran
+	\end{enumerate}
+\item Alternativni tokovi
+	\begin{itemize}
+	\item[3.a] Uneti podaci nisu ispravni - sistem ukazuje koji podaci nisu adekvatni. Slučaj upotrebe se nastavlja na koraku 2.
+	\item[7.a] Organizacija nije validan korisnik mreže. Administrator šalje e-mail kojim obaveštava organizaciju da je njihov zahtev za pristup mreži odbijen. Slučaj upotrebe se završava.
+	\item[8.a] Link za potvrdu naloga je istekao. Slučaj upotrebe se završava.
+	\end{itemize}
 \end{itemize}
 
 \subsection{Ažuriranje profila}
@@ -54,4 +72,19 @@
 \item Klikom na opciju ,,Sačuvaj" potvrdjuje izmene
 \item Sistem ažurira napravljene izmene
 \end{enumerate}
+\end{itemize}
+
+\subsection{Kreiranje korisničkih grupa}
+\begin{itemize}
+\item Korisnici aplikacije mogu kreirati grupu koja je jedinstveno određena nazivom. 
+\item Prilikom kreiranja korisnik bira da li će grupa biti:
+
+\begin{enumerate}
+\item vidljiva - mogu je posetiti i pretražiti svi korisnici mreže
+\item sakrivena - mogu je posetiti i pretražiti samo clanovi iste
+\end{enumerate}
+
+\item	Kreator grupe poziva druge korisnike ili ogranizacije da se učlane.
+\item	Kreator u svakom trenutku može da obriše člana ili bilo koju objavu ako smatra da je neprikladna.
+\item	Pored objava mogu se praviti i eventovi tematski slični grupi.
 \end{itemize}
