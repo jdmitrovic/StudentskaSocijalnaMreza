@@ -13,3 +13,45 @@
 \item	Kreator u svakom trenutku može da obriše člana ili bilo koju objavu ako smatra da je neprikladna.
 \item	Pored objava mogu se praviti i eventovi tematski slični grupi.
 \end{itemize}
+
+
+
+\subsection{Kreiranje profila (korisnik)}
+\begin{itemize}
+\item Kratak opis - Korisnik se registruje tako što popunjava formu svojim ličnim podacima. Nakon validacije unetih podataka korisnik prelazi na sledeći korak. Kako bi upotpunio kreiranje profila bira oblasti interesovanja na osnovu kojih će mu objave biti filtrirane.
+\item Učesnici - neregistrovan korisnik
+\item Preduslovi - korisnik ima pristup internetu
+\item Postuslovi - korisniku je kreiran nalog
+\item Glavni tok
+\begin{enumerate}
+\item Korisnik odlazi na stranicu za registrovanje novih korisnika
+\item Korisnik unosi lične podatke i klikne na dugme,,Sledeći korak"
+\item Vrši se validacija podataka
+\item Na sledećoj strani korisnik bira oblasti interesovanja prema kojim će mu se prikazivati objave (bira iz padajuće liste sa opcijom pretraživanja)
+\item Korisnik klikne na dugme ,,Završi registraciju"
+\item Sistem privremeno čuva unete podatke
+\item Korisniku je stigao aktivacioni e-mail sa linkom za potvrdu registracije
+\item Korisnik otvara mail i klikne na link za potvrdu registracije
+\item Sistem aktivira nalog
+\item Korisnik dobija obaveštenje da je nalog kreiran
+\end{enumerate}
+\item Alternativni tok \\
+3.a Nevalidna prijava - sistem ukazuje korisniku na kom polju forme podaci nisu korektno uneti. Slučaj upotrebe se nastavlja na koraku 2. \\
+7.a Korisnik nije potvrdio registraciju u odredjenom vremenskom intervalu - link za potvrdu je istekao. Slučaj upotrebe se završava
+\end{itemize}
+
+\subsection{Ažuriranje profila}
+\begin{itemize}
+\item Učesnici - korisnik, organizacija
+\item Preduslovi - korisnik je registrovan (organizacija se pridružila mreži)
+\item Postuslovi - izmenjeni su željeni podaci
+\item Glavni tok
+\begin{enumerate}
+\item Korisnik (organizacija) se prijavljuje na sistem
+\item Korisnik (organizacija) odlazi na stranicu za ažuriranje podataka klikom na opciju ,,Izmeni profil"
+\item Sistem prikazuje formu koja sadrži podatke koji se mogu menjati
+\item Korisnik (organizacija) pravi željene izmene
+\item Klikom na opciju ,,Sačuvaj" potvrdjuje izmene
+\item Sistem ažurira napravljene izmene
+\end{enumerate}
+\end{itemize}
