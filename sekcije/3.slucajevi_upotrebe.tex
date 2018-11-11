@@ -120,3 +120,49 @@
             \end{enumerate}    
 	 \end{itemize}
 \end{itemize}
+
+\subsection{Pretraživanje}
+\begin{itemize}
+\item Kratak opis - Korisnici i organizacije mogu vršiti pretragu po odredjenom kriterijumu i odabrati da li žele da pronadju objave, druge korisnike, organizacije ili grupe koji sadrže u nazivu (sadržaju u slucaju objava) ključne reci po kojim se pretražuje. Kriterijumi pretrage (filteri) se mogu kombinovati. Omogucava se lakše pronalaženje sadržaja koji interesuju korisnike mreže.
+\item Učesnici - Korisnici, organizacije
+\item Preduslovi - Korisnik (organizacija) - registrovani
+\item Postuslovi - Prikazani su svi korisnici/organizacije/grupe/objave (u zavisnosti od toga sta se pretražuje) koje zadovoljavaju kriterijum pretrage 
+\item Glavni tok
+	\begin{enumerate}
+	\item Korisnik (organizacija) unosi u polje za pretragu ključnu rec(ili vise njih) i klikne na dugme "Pretraga"
+	\item Izabere se predmet interesovanja - objava, korisnik, organizacija, grupa
+	\item Prikazuje se : u slučaju objava - sve objave koje u svom sadržaju imaju unete filtere, u slučaju korisnika, organizacija, grupa - svi koji u svom nazivu imaju unete filtere
+	\end{enumerate}
+\item Alternativni tok
+	\begin{enumerate}
+	\item Nije pronadjen predmet interesovanja
+	\item Sve dok korisnik (organizacija) želi da vrši pretragu, poništava filtere pretrage i unosi nove 
+	\end{enumerate}
+\end{itemize}
+
+
+\subsection{Kontrolisanje sadržaja i profila}
+\begin{itemize}
+\item Kratak opis - Administrator vrši kontrolu nad profilima korisnika (organizacija), kao i kontrolu objavljenog sadržaja, kako ne bi došlo do zloupotreba mreže ili deljenja neželjenog sadržaja. 
+\item Učesnici - Administrator
+\item Preduslovi - Korisnik (organizacija) - registrovani
+\item Postuslovi - Sadržaj koji je objavljen na mreži od strane korisnika (organizacija) je u skladu sa politikom socijalne mreze;
+informacije na profilima korisnika (organizacija) su ispravne i u skladu sa pravilima mreže
+\item Glavni tok
+	\begin{itemize}
+	\item Slucaj kontrole profila
+	\begin{enumerate}
+	\item Administrator dobija informaciju o sumnjivom podacima na profilu korisnika (stranici organizacije)
+	\item Kako je administratorima omogucen pristup profilima, vrši proveru informacija
+	\item Ukoliko se ispostavi da informacije nisu ispravne ili nisu u skladu sa pravilima mreže, administrator kontaktira korisnika (organizaciju) radi dalje provere i nakon toga, ukoliko je potrebno, uklanja profil
+	\end{enumerate}
+	\end{itemize}
+	\begin{itemize}
+	\item Slucaj kontrole sadržaja
+	\begin{enumerate}
+	\item Administrator dobija informaciju o sadržaju podeljenom na mreži koji nije u skladu sa politikom mreže
+	\item Nakon provere objave, administrator je uklanja ukoliko je neželjenog sadržaja 
+	\item Administrator zatim izvrši kontrolu profila korisnika (organizacije) koji je podelio objavu (opisano u prethodnom koraku)
+	\end{enumerate}
+	\end{itemize}
+\end{itemize}
