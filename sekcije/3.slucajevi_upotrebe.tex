@@ -88,3 +88,35 @@
 \item	Kreator u svakom trenutku može da obriše člana ili bilo koju objavu ako smatra da je neprikladna.
 \item	Pored objava mogu se praviti i eventovi tematski slični grupi.
 \end{itemize}
+
+\subsection{Deljenje sadržaja}
+\begin{itemize}
+\item Kratak opis - Korisnici mreže mogu kreirati objave koje će biti prikazane odabranoj publici. Odabir publike vrši sam kreator pažljivim odabirom oblasti na koje se objava odnosi. Takođe, mogu se targetirati i studenti određenih fakulteta.
+\item Učesnici - korisnici mreže
+\item Preduslovi - učesnici su registrovani
+\item Postuslovi - kreriana objava vidljiva je na profilu korsnika i na početnim stranama targetiranih korisnika
+\item Glavni tok
+    \begin{enumerate}
+	\item Korisnik klikne na dugme "Kreiraj novu objavu" nakon čega mu se prikazuju polja za unos
+	\item Bira tip objave: obaveštenje, pitanje, tutorijal ili ponuda
+	\item Popunjava polja karakteristična za tip objave (podtok)
+	\item Unosi tekst objave gde može i da označi druge korisnike
+    \item Bira oblasti na koje se objava odnosi
+    \item Može da izabere opciju za vidljivost objave
+    \item Može da izabere odredjene fakultete ukoliko postoji povezanost sa sadržajem
+    \item Nakon klika na dugme "Objavi", sistem obrađuje podatke, upisuje u bazu i objava je kreirana
+    \end{enumerate}
+\item Podtok - popunjavanje polja karakterističnih za tip objave
+    \begin{itemize}
+        \item Ukoliko je izabran "tutorijal"
+            \begin{enumerate}
+            \item Kreator mora da učita fajl
+            \item Mora da izabere folder ili kreira novi radi organizacije tutorijala
+            \item Može da označi saradnike na tutorijalu
+            \end{enumerate}
+         \item Ukoliko je izabraa "ponuda"
+            \begin{enumerate}
+            \item Kreator mora da navede tip ponude (npr rad na projektu, ponuda za posao/praksu, držanje časova, i slično)
+            \end{enumerate}    
+	 \end{itemize}
+\end{itemize}
