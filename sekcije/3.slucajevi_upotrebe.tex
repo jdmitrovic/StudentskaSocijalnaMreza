@@ -166,3 +166,67 @@ informacije na profilima korisnika (organizacija) su ispravne i u skladu sa prav
 	\end{enumerate}
 	\end{itemize}
 \end{itemize}
+
+
+\subsection{Komentarisanje objava}
+\begin{itemize}
+\item Kratak opis - Korisnik postavlja komentar na bilo koju vrstu objave (svoju ili objavu drugog korisnika). 
+\item Učesnici - Korisnik
+\item Preduslovi - Korisnik je registovan na mrežu
+\item Postuslovi - Komentar je uspešno postavljen i vidljiv ostalim korisnicima mreže.
+\item Glavni tok
+	\begin{enumerate}
+	\item Korisnik piše komentar na objavi.
+	\item Nakon završetka pisanja komentara, korisnik koristi dugme "Pošalji komentar". 
+	\item Komentar je objavljen i vidljiv ostalim korisnicima mreže.
+	\end{enumerate}
+\item Alternativni tokovi
+    \begin{itemize}
+	\item[3.a] Korisnik je uneo prazan komentar. Slučaj upotrebe se završava.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Ocenjivanje}
+\begin{itemize}
+\item Kratak opis - Korisnik ocenjuje objavu ili komentar bilo kog korisnika mreže, pri čemu korisnicima nije dozvoljeno ocenjivanje sopstvenih objava ili komentara. Ocenjivanje se vrši uvećavanjem ili umanjenjem ukupne ocene za jedan.
+\item Učesnici - Korisnik
+\item Preduslovi - Korisnik je registovan na mrežu
+\item Postuslovi - Ocena je prihvaćenja i konačna ocena objave ili komentara je ažurirana.
+\item Glavni tok
+	\begin{enumerate}
+	\item Korisnik postavlja pozitivnu ili negativnu ocenu na komentar ili objavu koristeći odgovarajuće dugme za to.
+	\item Nova ocena je uspešno uračunata u ukupnu ocenu odgovarajuće objave ili komentara.
+	\end{enumerate}
+\item Alternativni tokovi
+    \begin{itemize}
+	\item[1.a] Korisnik je već izvršio ocenjivanje na dotičnom sadržaju. Slučaj upotrebe se završava.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Komunikacija}
+\begin{itemize}
+\item Kratak opis - Korisnici ili organizacije koriste ugrađene funkcionalnosti sistema za međusobnu interakciju. Komunikacija se ostvaruje slanjem poruke ili odgovaranjem na primljenu poruku.
+\item Učesnici - Korisnik, organizacija
+\item Preduslovi 
+    \begin{itemize}
+	\item Korisnik je član mreže
+	\item Organizacija je član mreže
+	\end{itemize}
+\item Postuslovi - Poruka je uspešno poslata i vidljiva primaocu iste.
+\item Glavni tok
+	\begin{enumerate}
+	\item Korisnik ili organizacija pristupa profilu željenog korespodenta.
+	\item Pritiskom na dugme "Poruka", otvara se prozor. 
+	\item Unosi se željeni tekst u otvorenom prozoru. 
+	\item Pritiskom na dugme "Pošalji", šalje se poruka korespodentu.
+	\item Primalac poruke dobija obaveštenje o novoj poruci.
+	\item Primalac može odgovoriti na dobijenu poruku unošenjem teksta na odgovarajuće mesto.
+	\item Pritiskom na dugme "Odgovori", šalje se odgovor.
+	\item Koraci 6, 7 i 8 se ponavljaju sve dok se ne završi komunikacija.
+	\end{enumerate}
+\item Alternativni tokovi
+    \begin{itemize}
+	\item[4.a] Korisnik je uneo praznu poruku. Poruka se ne šalje, slučaj upotrebe se nastavlja od koraka 3.
+	\item[7.a] Primalac je uneo praznu poruku. Poruka se ne šalje, slučaj upotrebe se nastavlja od koraka 6.
+	\end{itemize}
+\end{itemize}
