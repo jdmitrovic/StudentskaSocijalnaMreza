@@ -66,6 +66,7 @@
 
 \subsection{Ažuriranje profila}
 \begin{itemize}
+\item Kratak opis - Korisnik može menjati svoje lične podatke ili oblasti interesovanja
 \item Učesnici - korisnik, organizacija
 \item Preduslovi - korisnik je registrovan (organizacija se pridružila mreži)
 \item Postuslovi - izmenjeni su željeni podaci
@@ -78,6 +79,10 @@
 \item Klikom na opciju "Sačuvaj" potvrdjuje izmene
 \item Sistem ažurira napravljene izmene
 \end{enumerate}
+\item Alternativni tokovi
+    \begin{itemize}
+    \item[1.a] Korisnik je zaboravio lozinku. Prelazi se na slučaj upotrebe - Zaboravljena lozinka
+    \end{itemize}
 \end{itemize}
 
 \subsection{Kreiranje korisničkih grupa}
@@ -235,4 +240,29 @@ informacije na profilima korisnika (organizacija) su ispravne i u skladu sa prav
 	\item[4.a] Korisnik je uneo praznu poruku. Poruka se ne šalje, slučaj upotrebe se nastavlja od koraka 3.
 	\item[7.a] Primalac je uneo praznu poruku. Poruka se ne šalje, slučaj upotrebe se nastavlja od koraka 6.
 	\end{itemize}
+\end{itemize}
+
+\subsection{Zaboravljena lozinka}
+\begin{itemize}
+    \item Kratak opis - Proces koji korisnik (organizacija) obavlja u slučaju da je zaboravio lozinku
+    \item Učesnici - korisnik, organizacija
+    \item Preduslovi - korisnik ima pristup internetu
+    \item Postuslovi - korisnik je uspešno promenio lozinku
+    \item Glavni tok
+        \begin{enumerate}
+        \item Korisnik(organizacija) bira opciju ,,Zaboravili ste lozinku''
+        \item Otvara se nova stranica na kojoj bira način na koji će promeniti lozinku (putem email-a ili broja telefona)
+        \item Bira opciju ,,Nastavi'' i otvara mu se nova stranica
+        \item Korisniku (organizaciji) stiže kod za promenu lozinke na email (telefon)
+        \item Unosi kod u polje na stranici i bira opciju ,,Nastavi''
+        \item Unosi novu šifru dva puta
+        \item Bira opciju ,,Promeni lozinku''
+        \item Dobija informaciju da je lozinka uspešno promenjena
+        \end{enumerate}
+    \item Alternativni tokovi
+        \begin{itemize}
+            \item[4.a] Korisnik nije uneo kod u odredjenom vremenskom intervalu. Slučaj upotrebe se završava
+            \item[7.a] Korisnik nije uneo oba puta istu lozinku. Slučaj upotrebe se nastavlja na koraku 6.
+            
+        \end{itemize}
 \end{itemize}
