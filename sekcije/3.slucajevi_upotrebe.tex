@@ -152,30 +152,35 @@
 \end{itemize}
 
 
-\subsection{Kontrolisanje sadržaja i profila}
+\subsection{Kontrolisanje sadržaja}
 \begin{itemize}
-	\item Kratak opis - Administrator vrši kontrolu nad profilima korisnika (organizacija), kao i kontrolu objavljenog sadržaja, kako ne bi došlo do zloupotreba mreže ili deljenja neželjenog sadržaja. 
+	\item Kratak opis - Administrator vrši kontrolu objavljenog sadržaja, kako ne bi došlo do deljenja neodgovarajućeg sadržaja. 
 	\item Učesnici - Administrator
 	\item Preduslovi - Korisnik (organizacija) - registrovani
-	\item Postuslovi - Sadržaj koji je objavljen na mreži od strane korisnika (organizacija) je u skladu sa politikom socijalne mreze;
-	informacije na profilima korisnika (organizacija) su ispravne i u skladu sa pravilima mreže
+	\item Postuslovi - Sadržaj koji je objavljen na mreži od strane korisnika (organizacija) je u skladu sa politikom socijalne mreze
 	\item Glavni tok
-	\begin{itemize}
-	\item Slucaj kontrole profila
 	\begin{enumerate}
-		\item Administrator dobija informaciju o sumnjivom podacima na profilu korisnika (stranici organizacije)
-		\item Kako je administratorima omogucen pristup profilima, vrši proveru informacija
-		\item Ukoliko se ispostavi da informacije nisu ispravne ili nisu u skladu sa pravilima mreže, administrator kontaktira korisnika (organizaciju) radi dalje provere i nakon toga, ukoliko je potrebno, uklanja profil
+		\item Administrator dobija informaciju o podeljenom sadržaju koji nije u skladu sa politikom mreže
+		\item Izvršava proveru objave
+		\item Administrator uklanja objavu ukoliko je neodgovarajućeg sadržaja
+		\item Izvršava kontrolu profila korisnika (organizacije) koji je podelio objavu (opisano u narednom slučaju upotrebe)
 	\end{enumerate}
-	\end{itemize}
-	\begin{itemize}
-		\item Slucaj kontrole sadržaja
+\end{itemize}
+
+
+\subsection{Kontrolisanje profila}
+\begin{itemize}
+	\item Kratak opis - Administrator vrši kontrolu nad profilima korisnika (organizacija) kako ne bi došlo do zloupotrebe mreže. 
+	\item Učesnici - Administrator, korisnik, organizacija
+	\item Preduslovi - Korisnik (organizacija) - registrovani
+	\item Postuslovi -Podaci na profilima korisnika (organizacija) su ispravni i u skladu sa pravilima mreže
+	\item Glavni tok
 	\begin{enumerate}
-		\item Administrator dobija informaciju o sadržaju podeljenom na mreži koji nije u skladu sa politikom mreže
-		\item Nakon provere objave, administrator je uklanja ukoliko je neželjenog sadržaja 
-		\item Administrator zatim izvrši kontrolu profila korisnika (organizacije) koji je podelio objavu (opisano u prethodnom koraku)
+		\item Administrator dobija informaciju o sumnjivim podacima na profilu korisnika (organizacije)
+		\item Izvršava proveru podataka
+		\item Ukoliko se ispostavi da su podaci neodgovarajući, administrator obaveštava korisnika (organizaciju) o tome
+		\item Ukoliko korisnik (organizacija) ne izmeni neodgovarajuće podatke na svom profilu, administrator uklanja profil sa mreže
 	\end{enumerate}
-	\end{itemize}
 \end{itemize}
 
 
