@@ -132,22 +132,43 @@
 	 \end{itemize}
 \end{itemize}
 
-\subsection{Pretraživanje}
+
+\subsection{Pretraživanje i pregled profila/grupa}
 \begin{itemize}
-	\item Kratak opis - Korisnici i organizacije mogu vršiti pretragu po odredjenom kriterijumu i odabrati da li žele da pronadju objave, druge korisnike, organizacije ili grupe koji sadrže u nazivu (sadržaju u slucaju objava) ključne reci po kojim se pretražuje. Kriterijumi pretrage (filteri) se mogu kombinovati. Omogucava se lakše pronalaženje sadržaja koji interesuju korisnike mreže.
+	\item Kratak opis - Korisnici i organizacije mogu vršiti pretragu i pregled profila drugih korisnika (organizacija), kao i pretragu i pregled sadržaja grupa.
 	\item Učesnici - Korisnici, organizacije
 	\item Preduslovi - Korisnik (organizacija) - registrovani
-	\item Postuslovi - Prikazani su svi korisnici/organizacije/grupe/objave (u zavisnosti od toga sta se pretražuje) koje zadovoljavaju kriterijum pretrage 
+	\item Postuslovi - Prikazani su svi profili/grupe koji zadovoljavaju kriterijum pretrage, omogućen je pregled njihovog sadržaja
 	\item Glavni tok
 	\begin{enumerate}
-		\item Korisnik (organizacija) unosi u polje za pretragu ključnu rec(ili vise njih) i klikne na dugme "Pretraga"
-		\item Izabere se predmet interesovanja - objava, korisnik, organizacija, grupa
-		\item Prikazuje se : u slučaju objava - sve objave koje u svom sadržaju imaju unete filtere, u slučaju korisnika, organizacija, grupa - svi koji u svom nazivu imaju unete filtere
+		\item Korisnik (organizacija) unosi u polje za pretragu karakter '@' a zatim i filter pretrage i klikne na dugme "Pretraga"
+		\item Prikazuju se svi profili/grupe koji u svom nazivu imaju uneti filter pretrage
+		\item Korisnik (organizacija) može da klikne na naziv profila/grupe i pregleda njihov sadržaj
 	\end{enumerate}
 	\item Alternativni tok
 	\begin{enumerate}
-		\item Nije pronadjen predmet interesovanja
-		\item Sve dok korisnik (organizacija) želi da vrši pretragu, poništava filtere pretrage i unosi nove 
+		\item Nije pronadjen traženi profil/grupa
+		\item Sve dok korisnik (organizacija) želi da vrši pretragu, poništava filter pretrage i unosi novi
+	\end{enumerate}
+\end{itemize}
+
+
+\subsection{Pretraživanje objava}
+\begin{itemize}
+	\item Kratak opis - Korisnici i organizacije mogu vršiti pretragu objava koje u svom sadržaju imaju unete filtere pretrage, odnosno unete tagove. Filteri i tagovi se mogu kombinovati. Omogućava se lakše pronalaženje sadržaja koji interesuje korisnike mreže.
+	\item Učesnici - Korisnici, organizacije
+	\item Preduslovi - Korisnik (organizacija) - registrovani
+	\item Postuslovi - Prikazane su sve objave koje zadovoljavaju kriterijum pretrage 
+	\item Glavni tok
+	\begin{enumerate}
+		\item Korisnik (organizacija) unosi u polje za pretragu filter pretrage (ili vise njih), odnosno za svaki tag unosi karakter '#' a zatim i naziv taga i klikne na dugme "Pretraga"
+		\item Prikazuju se sve objave koje u svom sadržaju imaju unete filtere/tagove
+		\item Korisnik (organizacija) može da klikne na objavu i pregleda njen sadržaj
+	\end{enumerate}
+	\item Alternativni tok
+	\begin{enumerate}
+		\item Nije pronadjena tražena objava
+		\item Sve dok korisnik (organizacija) želi da vrši pretragu, poništava filtere/tagove pretrage i unosi nove 
 	\end{enumerate}
 \end{itemize}
 
