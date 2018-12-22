@@ -68,21 +68,16 @@
 \begin{itemize}
 	\item Kratak opis - Korisnik može menjati svoje lične podatke ili oblasti interesovanja
 	\item Učesnici - korisnik, organizacija
-	\item Preduslovi - korisnik je registrovan (organizacija se pridružila mreži)
+	\item Preduslovi - korisnik je registrovan (organizacija se pridružila mreži) i ulogovan
 	\item Postuslovi - izmenjeni su željeni podaci
 	\item Glavni tok
 	\begin{enumerate}
-		\item Korisnik (organizacija) se prijavljuje na sistem
 		\item Korisnik (organizacija) odlazi na stranicu za ažuriranje podataka klikom na opciju "Izmeni profil"
 		\item Sistem prikazuje formu koja sadrži podatke koji se mogu menjati
 		\item Korisnik (organizacija) pravi željene izmene
 		\item Klikom na opciju "Sačuvaj" potvrdjuje izmene
 		\item Sistem ažurira napravljene izmene
 	\end{enumerate}
-	\item Alternativni tokovi
-    \begin{itemize}
-    	\item[1.a] Korisnik je zaboravio lozinku. Prelazi se na slučaj upotrebe - Zaboravljena lozinka
-    \end{itemize}
 \end{itemize}
 
 \subsection{Kreiranje korisničkih grupa}
@@ -105,7 +100,7 @@
 	\item Kratak opis - Korisnici mreže mogu kreirati objave koje će biti prikazane odabranoj publici. Odabir publike vrši sam kreator pažljivim odabirom oblasti na koje se objava odnosi. Takođe, mogu se targetirati i studenti određenih fakulteta.
 	\item Učesnici - korisnici mreže
 	\item Preduslovi - učesnici su registrovani
-	\item Postuslovi - kreirana objava vidljiva je na profilu korsnika i na početnim stranama targetiranih korisnika
+	\item Postuslovi - kreirana objava vidljiva je na profilu korisnika i na početnim stranama targetiranih korisnika
 	\item Glavni tok
     	\begin{enumerate}
 		\item Korisnik klikne na dugme "Kreiraj novu objavu" nakon čega mu se prikazuju polja za unos
@@ -136,9 +131,13 @@
 	 	\item Objava nije validna, kreiranje objave je stopirano
 	 \end{enumerate}
 \end{itemize}
+\begin{figure}[h!]
+		\centerline{\includegraphics[width=\textwidth]{slike/deljenje_sadrzaja.jpg}}
+		\captionof{figure}{Dijagram aktivnosti za deljenje sadržaja}
+\end{figure}
 
-
-\subsection{Pretraživanje i pregled profila/grupa}
+\subsection{Pretraživanje}
+\subsubsection{Pretraživanje i pregled profila/grupa}
 \begin{itemize}
 	\item Kratak opis - Korisnici i organizacije mogu vršiti pretragu i pregled profila drugih korisnika (organizacija), kao i pretragu i pregled sadržaja grupa.
 	\item Učesnici - Korisnici, organizacije
@@ -158,7 +157,7 @@
 \end{itemize}
 
 
-\subsection{Pretraživanje objava}
+\subsubsection{Pretraživanje objava}
 \begin{itemize}
 	\item Kratak opis - Korisnici i organizacije mogu vršiti pretragu objava koje u svom sadržaju imaju unete filtere pretrage, odnosno unete tagove. Filteri i tagovi se mogu kombinovati. Omogućava se lakše pronalaženje sadržaja koji interesuje korisnike mreže.
 	\item Učesnici - Korisnici, organizacije
@@ -166,7 +165,7 @@
 	\item Postuslovi - Prikazane su sve objave koje zadovoljavaju kriterijum pretrage 
 	\item Glavni tok
 	\begin{enumerate}
-		\item Korisnik (organizacija) unosi u polje za pretragu filter pretrage (ili vise njih), odnosno za svaki tag unosi karakter '#' a zatim i naziv taga i klikne na dugme "Pretraga"
+		\item Korisnik (organizacija) unosi u polje za pretragu filter pretrage (ili vise njih), odnosno za svaki tag unosi karakter '\#' a zatim i naziv taga i klikne na dugme "Pretraga"
 		\item Prikazuju se sve objave koje u svom sadržaju imaju unete filtere/tagove
 		\item Korisnik (organizacija) može da klikne na objavu i pregleda njen sadržaj
 	\end{enumerate}
@@ -177,8 +176,8 @@
 	\end{enumerate}
 \end{itemize}
 
-
-\subsection{Kontrolisanje sadržaja}
+\subsection{Kontrolisanje sistema}
+\subsubsection{Kontrolisanje sadržaja}
 \begin{itemize}
 	\item Kratak opis - Administrator vrši kontrolu objavljenog sadržaja, kako ne bi došlo do deljenja neodgovarajućeg sadržaja. 
 	\item Učesnici - Administrator
@@ -194,7 +193,7 @@
 \end{itemize}
 
 
-\subsection{Kontrolisanje profila}
+\subsubsection{Kontrolisanje profila}
 \begin{itemize}
 	\item Kratak opis - Administrator vrši kontrolu nad profilima korisnika (organizacija) kako ne bi došlo do zloupotrebe mreže. 
 	\item Učesnici - Administrator, korisnik, organizacija
@@ -272,8 +271,44 @@
 		\item[7.a] Primalac je uneo praznu poruku. Poruka se ne šalje, slučaj upotrebe se nastavlja od koraka 6.
 	\end{itemize}
 \end{itemize}
+\begin{figure}[h!]
+		\centerline{\includegraphics[width=\textwidth]{slike/komunikacija.jpg}}
+		\captionof{figure}{Dijagram aktivnosti za komunikaciju}
+\end{figure}
 
-\subsection{Zaboravljena lozinka}
+\subsection{Prijava i odjava}
+\subsubsection{Prijavljivanje na korisnički profil}
+\begin{itemize}
+	\item Kratak opis - Korisnik (ili organizacija) se prijavljije na profil koji je prethodno kreirao.
+	\item Učesnici - korisnik ili organizacija
+	\item Preduslovi - korisnik ima pristup internetu i ima napravljen profil na socijalnoj mreži.
+	\item Postuslovi - korisnik se uspešno prijavio na svog profil
+	\item Glavni tok
+		\begin{enumerate}
+			\item Korisnik pristupa veb stranici socijalne mreže
+			\item U polje za unos e-maila unosi svoj mail
+			\item U polje za unos lozinke unosi svoju lozinku
+			\item Korisnik pritiska dugme "Prijavi se" 
+		\end{enumerate}
+	\item Alternativni tokovi
+	    \begin{itemize}
+	        \item[4.a] Neuspešna prijava - korisnik je uneo neispravnu lozinku. Slučaj upotrebe se nastavlja na koraku 3. ili prelazi na slučaj upotrebe "zaboravljena lozinka"
+	    \end{itemize}
+\end{itemize}
+\subsubsection{Odjavljivanje sa korisničkog profila}
+\begin{itemize}
+	\item Kratak opis - Korisnik (ili organizacija) se odjavljuje sa profila na koji se prethodno prijavio.
+	\item Učesnici - korisnik ili organizacija
+	\item Preduslovi - korisnik ima pristup internetu i prijavljen je na svoj profil
+	\item Postuslovi - korisnik se uspešno odjavio sa svog profila, na koji se može opet prijaviti u bilo kom trenutku.
+	\item Glavni tok
+		\begin{enumerate}
+			\item Korisnik pristupa stranici svog profila
+			\item Korisnik pritiska dugme "Odjavi se"
+		\end{enumerate}
+\end{itemize}
+
+\subsubsection{Zaboravljena lozinka}
 \begin{itemize}
     \item Kratak opis - Proces koji korisnik (organizacija) obavlja u slučaju da je zaboravio lozinku
     \item Učesnici - korisnik, organizacija
@@ -318,30 +353,6 @@
 		\end{itemize}
 \end{itemize}
 
-\subsection{Odjavljivanje sa korisničkog profila}
-\begin{itemize}
-	\item Kratak opis - Korisnik (ili organizacija) se odjavljuje sa profila na koji se prethodno prijavio.
-	\item Učesnici - korisnik ili organizacija
-	\item Preduslovi - korisnik ima pristup internetu i prijavljen je na svoj profil
-	\item Postuslovi - korisnik se uspešno odjavio sa svog profila, na koji se može opet prijaviti u bilo kom trenutku.
-	\item Glavni tok
-		\begin{enumerate}
-			\item Korisnik pristupa stranici svog profila
-			\item Korisnik pritiska dugme "Odjavi se"
-		\end{enumerate}
-\end{itemize}
 
-\subsection{Prijavljivanje na korisnički profil}
-\begin{itemize}
-	\item Kratak opis - Korisnik (ili organizacija) se prijavljije na prof koji prethodno kreirao.
-	\item Učesnici - korisnik ili organizacija
-	\item Preduslovi - korisnik ima pristup internetu i ima napravljen profil na socijalnoj mreži.
-	\item Postuslovi - korisnik se uspešno prijavio na svog prof.
-	\item Glavni tok
-		\begin{enumerate}
-			\item Korisnik pristupa veb stranici socijalne mreže
-			\item U polje za unos e-maila unosi svoj mail
-			\item U polje za unos lozinke unosi svoju lozinku
-			\item Korisnik pritiska dugme "Prijavi se" 
-		\end{enumerate}
-\end{itemize}
+
+
