@@ -18,8 +18,11 @@ U ovom poglavlju biće prikazan predlog arhitekture sistema za socijalnu mrežu.
 \subsection{Slojevi arhitekture}
 \begin{enumerate}
     \item Prezentacioni sloj - najniži sloj, koji korisniku omogućava sto udobnije korišćenje Veb-aplikacije
-    \item Klijent kontroler - komunicira sa serverskim slojem arhitekture i obaveštava prezentacioni sloj o njegovoj akciji
-    \item Server kontroler - ima sličnu ulogu kao klijentski sloj arhitekture, ali pored toga ima mogucnost komunikacije sa bazom podataka
+    \item Komunikacioni sloj - deli se na dva podsloja:
+    \begin{enumerate}
+	    \item Klijent kontroler - komunicira sa serverskim slojem arhitekture i obaveštava prezentacioni sloj o njegovoj akciji
+	    \item Server kontroler - ima sličnu ulogu kao klijentski sloj arhitekture, ali pored toga ima mogucnost komunikacije sa bazom podataka
+	\end{enumerate}
     \item Sloj podataka - omogućava serverskom sloju da pristupa bazi podataka
 \end{enumerate}
 \begin{figure}[h!]
